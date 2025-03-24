@@ -1,0 +1,166 @@
+:root{
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "poppins", sans-serif;
+    background-color: var(--background-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 3em;
+    align-items: center;
+    height: 5em;
+}
+
+nav .logo a{
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+nav .logo p{
+    color: rgba(26, 13, 13, 0.427);
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+nav .alamat a{
+    color: var(--text-color);
+    margin: 0 1em;
+    font-weight: 400;
+}
+
+nav .alamat a:last-child{
+    color: var(--background-color);
+    background-color: var(--link-color);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+}
+
+nav .alamat a span{
+    margin-left: 0.5em;
+}
+/* Navbar End*/
+
+/* Section 1 */
+.about_section{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 4em;
+    align-items: center;
+}
+/* Section 1 End*/
+/* Left about*/
+.about_section .left_about{
+    width: 70%;
+    padding: 1em;
+}
+
+.about_section .left_about .links_about{
+    height: 80px;
+    margin-top: 1em; 
+ }
+
+.about_section .left_about .links_about a{
+    padding: 0.2em;
+    margin: auto 0.5em;
+    margin-top: 2em;
+    border-radius: 1em;
+    border:solid var(--link-color);
+}
+
+.about_section .left_about .links_about a:last-child{
+    display: block;
+    color: var(--background-color);
+    background-color:var(--link-color);
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    border: solid rgba(0, 0, 0, 0.445);
+    width: 12em;
+}
+/* Left about end*/
+/* Right about*/
+
+.about_section .right_about{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5em;
+}
+.about_section .right_about img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+.big-emoji {
+    font-size: 2em; 
+}
+
+/* Right about end*/
+
+@media screen and (max-width: 768px){
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding: 1em;
+    }
+
+    nav .logo{
+        margin-bottom: 1em;
+    }
+
+    nav .logo p{
+        text-align: center;
+    }
+
+    nav .alamat{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .alamat a{
+        margin: 0.5em 0;
+    }
+
+}
+
+@media screen and (max-width: 865px){
+    .about_section{
+        flex-direction: column-reverse;
+        margin: 2em;
+    }
+
+    .about_section .left_about{
+        width: 100%;
+    }
+
+    .about_section .right_about{
+        width: 40%;
+    }
+}
